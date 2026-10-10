@@ -1,0 +1,54 @@
+
+      you always keep smiling, meri jaan! 🥰
+      <br><br>
+      You make ordinary moments feel special.
+      I hope your new year brings you love,
+      laughter, success and beautiful memories. 🌷
+      <br><br>
+      Thank you for being YOU.
+      You are precious, you are loved,
+      and you deserve the whole universe! 💖
+      <br><br>
+      Happy Birthday once again! 🎂🎉
+      <br>
+      Sending you the biggest hug! 🤗💕
+    </p>
+    <p>Forever keep shining, birthday girl! ✨</p>
+  </div>
+
+  <button onclick="openSurprise()">One More Surprise 🎁</button>
+
+  <div id="surprise">
+    <h2>🎉 A Little Wish For You 🎉</h2>
+    <p>
+      Close your eyes, make a wish! 🌙💗<br>
+      May all your dreams come true.<br>
+      You deserve endless happiness! 🦋
+    </p>
+    <div style="font-size:40px">💖🌸🎂💖</div>
+  </div>
+</div>
+
+<script>
+function openLetter() {
+  document.getElementById("letter").style.display = "block";
+}
+
+function openSurprise() {
+  document.getElementById("surprise").style.display = "block";
+  for (let i = 0; i < 25; i++) {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.textContent = ["💖", "💕", "💗", "🌸", "✨"][
+      Math.floor(Math.random() * 5)
+    ];
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+    heart.style.fontSize = (18 + Math.random() * 22) + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 7000);
+  }
+}
+</script>
+</body>
+</html>
